@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.6px;
+  text-rendering: optimizeLegibility;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Cedarville Cursive', cursive;
+}

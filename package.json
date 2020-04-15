@@ -1,0 +1,22 @@
+{
+  "name": "restaurant_website",
+  "version": "1.0.0",
+  "description": "responsive resturant website built with html5 css3 javascript and flexbox",
+  "main": "index.js",
+  "scripts": {
+    "sass_compile": "node-sass sass/main.scss dist/css/style.css -w"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "flexbox",
+    "es6",
+    "javascript"
+  ],
+  "author": "c0d1ngd0j0",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
