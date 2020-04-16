@@ -1,0 +1,166 @@
+.navbar{
+  &-strip{
+    width: 8rem;
+    z-index: 50;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white-color;
+    border-right: 1px solid rgba(0,0,0,.1);
+  }
+
+  &-icon{
+    margin-top: 1rem;
+    cursor: pointer;
+
+    .icon-line{
+      height: .35rem;
+      width: 3rem;
+      background-color: $primary-color-dark;
+      margin-bottom: .5rem;
+
+      &.line-1, 
+      &.line-3{
+        width: 2rem;
+      }
+    }
+  }
+
+  &-year{
+    color: $primary-color-dark;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  &-menu{
+    width: 35%;
+    left: -38rem;
+    height: 100%;
+    position: fixed;
+    background-color: $primary-color-light;
+    
+    &__images{
+      width: 35%;
+      height: 100%;
+      left: -52rem;
+      position: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: rgba(255,255,255, 1);
+
+      .bg{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+
+        &.hide {
+          display: none;
+        }
+      }
+    }
+
+    &__nav{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      ul{
+        list-style: none;
+      }
+    }
+
+    &__links{
+      
+      &-item{
+        font-size: 1.8rem;
+        line-height: 6rem;
+        font-weight: lighter;
+        color: $primary-color-dark;
+
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        #order{
+          color: #afafaf;
+          font-size: 1.2rem;
+          font-weight: lighter;
+        }
+
+        #tag {
+          font-size: 1.2rem;
+          font-weight: lighter;
+          color: #afafaf;
+          transition: 0.3s;
+          text-transform: uppercase;
+        }
+
+        #menu{
+          background: linear-gradient(#000,#5B5B5B) left no-repeat, $primary-color-dark;
+          background-size: 0% 100%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all .8s ease-in-out;
+
+          &:hover{
+            background-size: 100% 100%;
+            transition: all .8s ease-in-out;
+          }
+        }
+
+        &:hover #tag{
+          color: $secondary-color-light;
+          transition: all .8s ease-in-out;
+        }
+      }
+    }
+
+    .social-links{
+      width: 60%;
+      display: flex;
+      margin-top: 2rem;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .social-link{
+        font-size: 1.6rem;
+        color: $primary-color-dark;
+      }
+    }
+  }
+}
+
+.bg1{
+  display: block;
+  background-size: cover;
+  background: url('../img/img1.jpg') no-repeat 50% 50%;
+}
+.bg2{
+  display: block;
+  background-size: cover;
+  background: url('../img/img2.jpg') no-repeat 50% 50%;
+}
+.bg3{
+  display: block;
+  background-size: cover;
+  background: url('../img/img3.jpg') no-repeat 50% 50%;
+}
+.bg4{
+  display: block;
+  background-size: cover;
+  background: url('../img/img1.jpg') no-repeat 50% 50%;
+}
+.bg5{
+  display: block;
+  background-size: cover;
+  background: url('../img/img2.jpg') no-repeat 50% 50%;
+}
