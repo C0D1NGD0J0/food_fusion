@@ -1,8 +1,10 @@
 @import 'abstract/variables';
+@import 'abstract/mixins';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/animation';
 @import 'base/utilities';
+@import 'base/media-queries';
 @import 'layouts/navbar';
 @import 'layouts/content';
 @import 'layouts/footer';

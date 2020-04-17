@@ -1,3 +1,7 @@
+/*
+Argument options:
+phone_sm, phone_lg, tablet_up, tablet_ls, widescreen, desktop
+*/
 *,
 *::after,
 *::before {
@@ -59,6 +63,33 @@ p {
   line-height: 1.7;
   font-size: 1.6rem; }
 
+@media (max-width: 598px) {
+  .navbar-menu__links-item {
+    font-size: 1.2rem !important;
+    line-height: 4rem; } }
+
+@media (max-width: 598px) {
+  .navbar-menu__links .tag,
+  .navbar-menu__links .order {
+    display: none; } }
+
+@media (max-width: 598px) {
+  .navbar-menu__images {
+    display: none; } }
+
+@media (max-width: 598px) {
+  .header {
+    display: none; } }
+
+@media (max-width: 598px) {
+  .hero-content {
+    margin-top: 4rem; } }
+
+@media (max-width: 598px) {
+  .hero-content .headline {
+    padding: 1rem;
+    font-size: 250% !important; } }
+
 .navbar-strip {
   width: 8rem;
   z-index: 50;
@@ -88,17 +119,17 @@ p {
   font-size: 1.6rem; }
 
 .navbar-menu {
-  width: 35%;
+  width: 30%;
   z-index: 20;
-  left: -38rem;
+  left: -35rem;
   height: 100%;
   position: fixed;
   background-color: #f6f6f6; }
   .navbar-menu__images {
     width: 35%;
     height: 100%;
-    left: -52rem;
     position: fixed;
+    left: -50rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,24 +157,24 @@ p {
     .navbar-menu__links-item a {
       color: inherit;
       text-decoration: none; }
-    .navbar-menu__links-item #order {
+    .navbar-menu__links-item .order {
       color: #afafaf;
       font-size: 1.2rem;
       font-weight: lighter; }
-    .navbar-menu__links-item #tag {
+    .navbar-menu__links-item .tag {
       font-size: 1.2rem;
       font-weight: lighter;
       color: #afafaf;
       transition: 0.3s;
       text-transform: uppercase; }
-    .navbar-menu__links-item #menu {
+    .navbar-menu__links-item .menu {
       background: linear-gradient(#000, #5B5B5B) left no-repeat, #808080;
       background-size: 0% 100%;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: all .8s ease-in-out; }
-      .navbar-menu__links-item #menu:hover {
+      .navbar-menu__links-item .menu:hover {
         background-size: 100% 100%;
         transition: all .8s ease-in-out; }
     .navbar-menu__links-item:hover #tag {

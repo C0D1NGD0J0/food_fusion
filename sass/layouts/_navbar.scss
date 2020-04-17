@@ -36,9 +36,9 @@
   }
 
   &-menu{
-    width: 35%;
+    width: 30%;
     z-index: 20;
-    left: -38rem;
+    left: -35rem;
     height: 100%;
     position: fixed;
     background-color: $primary-color-light;
@@ -46,8 +46,8 @@
     &__images{
       width: 35%;
       height: 100%;
-      left: -52rem;
       position: fixed;
+      left: -50rem;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -90,13 +90,13 @@
           text-decoration: none;
         }
 
-        #order{
+        .order{
           color: #afafaf;
           font-size: 1.2rem;
           font-weight: lighter;
         }
 
-        #tag {
+        .tag {
           font-size: 1.2rem;
           font-weight: lighter;
           color: #afafaf;
@@ -104,7 +104,7 @@
           text-transform: uppercase;
         }
 
-        #menu{
+        .menu{
           background: linear-gradient(#000,#5B5B5B) left no-repeat, $primary-color-dark;
           background-size: 0% 100%;
           background-clip: text;
