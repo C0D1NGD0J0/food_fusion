@@ -38,6 +38,15 @@ a {
 .hide {
   display: none; }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 0%;
+  z-index: -1;
+  height: 100%;
+  background: #222629; }
+
 h1, h2, h3,
 h4, h5 {
   margin: 0;
