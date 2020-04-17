@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+$(window).load(function () {
   const t2 = new TimelineMax({ paused: false })
   let splitText = new SplitText(".headline");
   let splitText2 = new SplitText(".sub-headline");
