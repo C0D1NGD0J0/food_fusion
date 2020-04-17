@@ -42,7 +42,7 @@ $(function(){
   const t1 = new TimelineMax({paused: true});
   t1.to(".navbar-menu", 1, {left: '8rem', ease: Expo.easeInOut}, "-=.4")
   t1.staggerFrom(".navbar-menu__links li", 1, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1);
-  t1.to(".navbar-menu__images", 1, {left: '50rem', ease: Expo.easeInOut, delay: -1}, "-=1");
+  t1.to(".navbar-menu__images", 1, {left: '46rem', ease: Expo.easeInOut, delay: -1}, "-=1");
   t1.reverse();
 
   $(document).on('click', ".navbar-icon", function(){
