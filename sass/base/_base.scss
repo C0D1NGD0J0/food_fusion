@@ -14,6 +14,7 @@ html, body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,11 +26,20 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3,
-h4, h5 {
-  margin: 0;
-  text-transform: uppercase;
-  font-family: 'Cedarville Cursive', cursive;
+main {
+  height: 100%;
+  margin-left: 8rem;
+  width: calc(100% - 8rem);
+  max-width: calc(100% - 8rem);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .hide {

@@ -1,0 +1,16 @@
+.btn{
+  font-size: 1.4rem;
+  display: inline-block;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  &.cta-btn{
+    font-weight: 300;
+    color: $primary-color;
+    border-radius: .3rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid #fff;
+    background-color: $black-color;
+  }
+}
+

@@ -1,0 +1,80 @@
+.header{
+  width: 100%;
+  //top: 0;
+  //left: 0;
+  //position: absolute;
+  &-nav{
+    display: flex;
+    padding: 1rem;
+    height: 7.5rem;
+    align-items: center;
+    justify-content: center;
+
+    &__list{
+      display: flex;
+      list-style: none;
+
+      &-item{
+        margin: 0 .4rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .nav-link{
+      font-weight: lighter;
+      letter-spacing: .2rem;
+      color: $primary-color-dark;
+      transition: color 0.3s ease-in-out;
+
+      span{
+        font-weight: bold;
+      }
+
+      &:hover,
+      &:focus{
+        color: $black-color;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &:hover span{
+        font-weight: bold;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url("../img/hero.jpg");
+
+  &-content{
+    color: #fff;
+    text-align: center;
+
+    .headline{
+      font-size: 6rem;
+      line-height: 1.7;
+      letter-spacing: .2rem;
+    }
+
+    .sub-headline{
+      font-size: 1.4rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+
+    &__cta{
+      margin: 3rem 0;
+    }
+  }
+}

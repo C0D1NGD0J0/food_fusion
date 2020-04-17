@@ -1,3 +1,12 @@
+$(window).on('load', function () {
+  const t2 = new TimelineMax({ paused: false })
+  let splitText = new SplitText(".headline");
+  let splitText2 = new SplitText(".sub-headline");
+  t2.staggerFrom(splitText.chars, .7, { opacity: 0, y: -100, ease: Power1.easeInOut }, .2)
+  t2.staggerFrom(splitText2.words, .7, { opacity: 0, y: 100, ease: Power2.easeInOut }, .2)
+  t2.from(".hero-content__cta", 1, {opacity: 0});
+});
+
 $(function(){
   $(".link-item1").hover(function(){
     $(".bg1").fadeIn(600);
@@ -30,10 +39,9 @@ $(function(){
   });
 
   const t1 = new TimelineMax({paused: true});
-  //t1.to("#main", 1, {display: 'none', zIndex: '-1'});
-  t1.to(".navbar-menu", 1, {left: '8rem', ease: Expo.easeInOut}, "-=1");
-  t1.staggerFrom(".navbar-menu__links li", 2, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1);
-  t1.to(".navbar-menu__images", 2, {left: '52rem', ease: Expo.easeInOut, delay: -3}, "-=1");
+  t1.to(".navbar-menu", 1, {left: '8rem', ease: Expo.easeInOut}, "-=.4");
+  t1.staggerFrom(".navbar-menu__links li", 1, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1);
+  t1.to(".navbar-menu__images", 1, {left: '52rem', ease: Expo.easeInOut, delay: -1}, "-=1");
   t1.reverse();
 
   $(document).on('click', ".navbar-icon", function(){
