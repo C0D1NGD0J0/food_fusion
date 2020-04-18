@@ -39,11 +39,23 @@ $(window).on("load", function () {
 
   const t1 = new TimelineMax({paused: true});
   t1.to(".navbar-menu", 1, {left: '8rem', ease: Expo.easeInOut}, "-=.4")
-  t1.staggerFrom(".navbar-menu__links li", 1, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1);
-  t1.to(".navbar-menu__images", 1, {left: '46rem', ease: Expo.easeInOut, delay: -1}, "-=1");
+  .staggerFrom(".navbar-menu__links li", 1, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1)
+  .to(".navbar-menu__images", 1, {left: '46rem', ease: Expo.easeInOut, delay: -1}, "-=1");
   t1.reverse();
 
   $(document).on('click', ".navbar-icon", function(){
     t1.reversed(!t1.reversed());
   });
+
+  
+
+  const controller = new ScrollMagic.Controller();
+  const t3 = new TimelineMax({ paused: false });
+  
+  t3.from('#aboutus', 2, {opacity: 0 })
+    .staggerFrom(".workhours__card", 1, { x: -50, opacity: 0, ease: Linear.easeIn }, 0.2);
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: "#aboutus"
+  }).setTween(t3).addTo(controller);
 });
