@@ -331,10 +331,10 @@ p {
 
 .workhours {
   width: 100%;
-  height: 60%;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
+  padding: 5rem;
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
@@ -343,22 +343,24 @@ p {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/workhours.jpg"); }
   .workhours-content {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; }
   .workhours__card {
-    width: 25rem;
-    margin: 2rem;
-    height: 30rem;
+    width: 20rem;
+    margin: 1rem;
+    height: 35rem;
     display: flex;
+    flex: 1 0 20%;
     padding: 4rem 2rem;
     text-align: center;
     border-radius: 2rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transition: all .3s linear;
+    transition: all .4s linear;
     background-color: #fff;
     border: 0.4rem solid #808080; }
     .workhours__card-content .icon {
@@ -375,13 +377,16 @@ p {
       transition: all .3s linear;
       box-shadow: 0 0.1rem 0.8rem 0.1rem rgba(34, 38, 41, 0.6);
       border: 0.4rem solid #a66f2c; }
+    .workhours__card:hover .icon, .workhours__card:focus .icon {
+      color: #a66f2c;
+      transition: color .4s linear; }
 
 @media (max-width: 576px) {
   .navbar-menu__links-item {
     font-size: 90%;
     line-height: 4rem; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .navbar-menu__links-item {
     font-size: 110%;
     line-height: 5rem; } }
@@ -391,7 +396,7 @@ p {
   .navbar-menu__links .order {
     display: none; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .navbar-menu__links .tag,
   .navbar-menu__links .order {
     display: none; } }
@@ -400,7 +405,7 @@ p {
   .navbar-menu__images {
     display: none; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .navbar-menu__images {
     display: none; } }
 
@@ -424,7 +429,7 @@ p {
     display: flex;
     flex-direction: column; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus-content {
     padding: 2rem 1rem; } }
 
@@ -432,11 +437,11 @@ p {
   .aboutus__img {
     display: none; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus__img {
     width: 40%; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus__img img {
     width: 100%;
     height: 100%;
@@ -448,7 +453,7 @@ p {
     text-align: left;
     padding-bottom: 1rem; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus__description {
     width: 60%;
     text-align: left;
@@ -460,7 +465,7 @@ p {
     font-size: 110%;
     text-align: left; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus__description p {
     padding: 1rem 0;
     font-size: 110%;
@@ -475,7 +480,7 @@ p {
       font-size: 4rem;
       color: #a66f2c; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .aboutus__title {
     font-size: 120%; } }
 
@@ -502,7 +507,7 @@ p {
       .workhours__card-content .hours {
         color: #a66f2c; } }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .workhours-content {
     padding: 0;
     height: 100%;
