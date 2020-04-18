@@ -37,6 +37,8 @@ img {
   max-width: 100%; }
 
 a {
+  font-size: 1.3rem;
+  color: #222629;
   text-decoration: none; }
 
 .hide {
@@ -62,33 +64,6 @@ p {
   font-weight: 400;
   line-height: 1.7;
   font-size: 1.6rem; }
-
-@media (max-width: 598px) {
-  .navbar-menu__links-item {
-    font-size: 1.2rem !important;
-    line-height: 4rem; } }
-
-@media (max-width: 598px) {
-  .navbar-menu__links .tag,
-  .navbar-menu__links .order {
-    display: none; } }
-
-@media (max-width: 598px) {
-  .navbar-menu__images {
-    display: none; } }
-
-@media (max-width: 598px) {
-  .header {
-    display: none; } }
-
-@media (max-width: 598px) {
-  .hero-content {
-    margin-top: 4rem; } }
-
-@media (max-width: 598px) {
-  .hero-content .headline {
-    padding: 1rem;
-    font-size: 250% !important; } }
 
 .navbar-strip {
   width: 8rem;
@@ -221,10 +196,12 @@ p {
   margin: 0 auto; }
 
 .btn {
+  background: none;
   font-size: 1.4rem;
   display: inline-block;
   letter-spacing: .2rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: color .3s linear; }
   .btn.cta-btn {
     font-weight: 300;
     color: #ddd;
@@ -232,6 +209,18 @@ p {
     padding: 1rem 1.2rem;
     border: 1px solid #fff;
     background-color: #222629; }
+  .btn.link-btn {
+    font-weight: 300;
+    color: #222629;
+    border-radius: .3rem;
+    padding: 1rem 1.2rem;
+    transition: all .3s linear;
+    background-color: transparent;
+    border: 1px solid #a66f2c; }
+    .btn.link-btn:hover, .btn.link-btn:focus {
+      color: #fff;
+      transition: all .3s linear;
+      background-color: #a66f2c; }
 
 .header {
   width: 100%; }
@@ -286,3 +275,250 @@ p {
       color: #ddd; }
     .hero-content__cta {
       margin: 3rem 0; }
+
+.aboutus {
+  width: 100%;
+  display: flex;
+  overflow: hidden; }
+  .aboutus-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 2rem 3rem; }
+  .aboutus__title {
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    font-weight: lighter; }
+    .aboutus__title::first-letter {
+      font-size: 6rem;
+      color: #a66f2c; }
+  .aboutus__subtitle {
+    font-size: 1.4rem;
+    font-weight: bold; }
+    .aboutus__subtitle span {
+      position: relative;
+      display: inline-block; }
+      .aboutus__subtitle span:before {
+        right: 100%;
+        margin-right: .7rem; }
+      .aboutus__subtitle span:after {
+        left: 100%;
+        margin-left: .7rem; }
+      .aboutus__subtitle span:before, .aboutus__subtitle span:after {
+        top: 0;
+        width: 3rem;
+        content: "";
+        height: 13px;
+        position: absolute;
+        border-bottom: 1px solid #a66f2c; }
+  .aboutus__img, .aboutus__description {
+    width: 48%; }
+  .aboutus__img img {
+    width: 100%;
+    height: 100%; }
+  .aboutus__description {
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .aboutus__description p {
+      line-height: 1.9;
+      padding: 3rem 0;
+      font-size: 1.8rem;
+      text-align: justify; }
+
+.workhours {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/workhours.jpg"); }
+  .workhours-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+  .workhours__card {
+    width: 25rem;
+    margin: 2rem;
+    height: 30rem;
+    display: flex;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .3s linear;
+    background-color: #fff;
+    border: 0.4rem solid #808080; }
+    .workhours__card-content .icon {
+      font-size: 8rem;
+      color: #222629; }
+    .workhours__card-content h3 {
+      font-size: 2.6rem;
+      font-weight: lighter; }
+    .workhours__card-content p {
+      font-size: 1.8rem; }
+    .workhours__card-content .hours {
+      color: #a66f2c; }
+    .workhours__card:hover, .workhours__card:focus {
+      transition: all .3s linear;
+      box-shadow: 0 0.1rem 0.8rem 0.1rem rgba(34, 38, 41, 0.6);
+      border: 0.4rem solid #a66f2c; }
+
+@media (max-width: 576px) {
+  .navbar-menu__links-item {
+    font-size: 90%;
+    line-height: 4rem; } }
+
+@media (min-width: 577px) {
+  .navbar-menu__links-item {
+    font-size: 110%;
+    line-height: 5rem; } }
+
+@media (max-width: 576px) {
+  .navbar-menu__links .tag,
+  .navbar-menu__links .order {
+    display: none; } }
+
+@media (min-width: 577px) {
+  .navbar-menu__links .tag,
+  .navbar-menu__links .order {
+    display: none; } }
+
+@media (max-width: 576px) {
+  .navbar-menu__images {
+    display: none; } }
+
+@media (min-width: 577px) {
+  .navbar-menu__images {
+    display: none; } }
+
+@media (max-width: 576px) {
+  .header {
+    display: none; } }
+
+@media (max-width: 576px) {
+  .hero-content {
+    margin-top: 4rem; } }
+
+@media (max-width: 576px) {
+  .hero-content .headline {
+    padding: 1rem;
+    font-size: 250% !important; } }
+
+@media (max-width: 576px) {
+  .aboutus-content {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; } }
+
+@media (min-width: 577px) {
+  .aboutus-content {
+    padding: 2rem 1rem; } }
+
+@media (max-width: 576px) {
+  .aboutus__img {
+    display: none; } }
+
+@media (min-width: 577px) {
+  .aboutus__img {
+    width: 40%; } }
+
+@media (min-width: 577px) {
+  .aboutus__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; } }
+
+@media (max-width: 576px) {
+  .aboutus__description {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 1rem; } }
+
+@media (min-width: 577px) {
+  .aboutus__description {
+    width: 60%;
+    text-align: left;
+    padding-bottom: 1rem; } }
+
+@media (max-width: 576px) {
+  .aboutus__description p {
+    padding: 1rem 0;
+    font-size: 110%;
+    text-align: left; } }
+
+@media (min-width: 577px) {
+  .aboutus__description p {
+    padding: 1rem 0;
+    font-size: 110%;
+    text-align: justify; } }
+
+@media (max-width: 576px) {
+  .aboutus__title {
+    margin: 0;
+    padding: 0;
+    font-size: 120%; }
+    .aboutus__title::first-letter {
+      font-size: 4rem;
+      color: #a66f2c; } }
+
+@media (min-width: 577px) {
+  .aboutus__title {
+    font-size: 120%; } }
+
+@media (max-width: 576px) {
+  .workhours {
+    overflow: scroll; }
+    .workhours-content {
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+    .workhours__card {
+      width: 25%;
+      margin: 1rem;
+      flex: 1 0 45%; }
+      .workhours__card-content .icon {
+        font-size: 6rem;
+        color: #222629; }
+      .workhours__card-content h3 {
+        font-size: 2rem;
+        font-weight: lighter; }
+      .workhours__card-content p {
+        font-size: 1.6rem; }
+      .workhours__card-content .hours {
+        color: #a66f2c; } }
+
+@media (min-width: 577px) {
+  .workhours-content {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+  .workhours__card {
+    width: 25%;
+    margin: 1rem;
+    flex: 1 0 45%; }
+    .workhours__card-content .icon {
+      font-size: 6rem;
+      color: #222629; }
+    .workhours__card-content h3 {
+      font-size: 2rem;
+      font-weight: lighter; }
+    .workhours__card-content p {
+      font-size: 1.6rem; }
+    .workhours__card-content .hours {
+      color: #a66f2c; } }

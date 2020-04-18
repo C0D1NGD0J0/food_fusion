@@ -1,8 +1,10 @@
 .btn{
+  background: none;
   font-size: 1.4rem;
   display: inline-block;
   letter-spacing: .2rem;
   text-transform: uppercase;
+  transition: color .3s linear;
 
   &.cta-btn{
     font-weight: 300;
@@ -11,6 +13,23 @@
     padding: 1rem 1.2rem;
     border: 1px solid #fff;
     background-color: $black-color;
+  }
+
+  &.link-btn{
+    font-weight: 300;
+    color: $black-color;
+    border-radius: .3rem;
+    padding: 1rem 1.2rem;
+    transition: all .3s linear;
+    background-color: transparent;
+    border: 1px solid $secondary-color-dark;
+
+    &:hover,
+    &:focus{
+      color: $white-color;
+      transition: all .3s linear;
+      background-color: $secondary-color-dark;
+    }
   }
 }
 

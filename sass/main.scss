@@ -4,7 +4,6 @@
 @import 'base/typography';
 @import 'base/animation';
 @import 'base/utilities';
-@import 'base/media-queries';
 @import 'layouts/navbar';
 @import 'layouts/content';
 @import 'layouts/footer';
@@ -18,3 +17,4 @@
 @import 'pages/cart';
 @import 'pages/reservation';
 @import 'pages/account';
+@import 'base/media-queries';

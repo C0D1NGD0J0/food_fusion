@@ -4,15 +4,19 @@ phone_sm, phone_lg, tablet_up, tablet_ls, widescreen, desktop
 */
 @mixin respond($breakpoint){
   @if $breakpoint == phone{
-    @media (max-width: 598px) { @content; }
+    @media (max-width: 576px) { @content; }
   }
 
-  @if $breakpoint == tablet_pt{
-    @media (min-width: 600px) { @content; }
+  @if $breakpoint == tablet_sm{
+    @media (min-width: 577px) { @content; }
   }
 
-  @if $breakpoint == tablet_ls{
-    @media (min-width: 900px) { @content; }
+  @if $breakpoint == tablet_md{
+    @media (min-width: 768px) { @content; }
+  }
+
+  @if $breakpoint == tablet_lg{
+    @media (min-width: 992px) { @content; }
   }
 
   @if $breakpoint == desktop{

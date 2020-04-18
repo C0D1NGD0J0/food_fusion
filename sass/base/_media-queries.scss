@@ -2,8 +2,13 @@
   &__links{
     &-item{
       @include respond(phone) {
-        font-size: 1.2rem !important;
+        font-size: 90%;
         line-height: 4rem;
+      }
+
+      @include respond(tablet_sm) {
+        font-size: 110%;
+        line-height: 5rem;
       }
     }
 
@@ -12,11 +17,17 @@
       @include respond(phone) {
         display: none;
       }
+      @include respond(tablet_sm) {
+        display: none;
+      }
     }
   }
 
   &__images{
     @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet_sm) {
       display: none;
     }
   }
@@ -37,6 +48,161 @@
     @include respond(phone) {
       padding: 1rem;
       font-size: 250% !important;
+    }
+  }
+}
+
+.aboutus{
+  //padding: 4rem 0;
+  &-content{
+    @include respond(phone) {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(tablet_sm){
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__img{
+    @include respond(phone) {
+      display: none;
+    }
+
+    @include respond(tablet_sm){
+      width: 40%;
+    }
+
+    img{
+      @include respond(tablet_sm){
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__description{
+    @include respond(phone) {
+      width: 100%;
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+
+    @include respond(tablet_sm) {
+      width: 60%;
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+    
+    p{
+      @include respond(phone) {
+        padding: 1rem 0;
+        font-size: 110%;
+        text-align: left;
+      }
+    }
+
+    p{
+      @include respond(tablet_sm) {
+        padding: 1rem 0;
+        font-size: 110%;
+        text-align: justify;
+      }
+    }
+  }
+
+  &__title{
+    @include respond(phone) {
+      margin: 0;
+      padding: 0;
+      font-size: 120%;
+
+      &::first-letter{
+        font-size: 4rem;
+        color: $secondary-color-dark;
+      }
+    }
+
+    @include respond(tablet_sm) {
+      font-size: 120%;
+    }
+  }
+}
+
+.workhours {
+  @include respond(phone) {
+    overflow: scroll;
+
+    &-content{
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__card{
+      width: 25%;
+      margin: 1rem;
+      flex: 1 0 45%;
+      
+      &-content{
+        .icon{
+          font-size: 6rem;
+          color: $black-color;
+        }
+
+        h3{
+          font-size: 2rem;
+          font-weight: lighter;
+        }
+
+        p{
+          font-size: 1.6rem;
+        }
+
+        .hours{
+          color: $secondary-color-dark;
+        }
+      }
+    }
+  }
+
+  @include respond(tablet_sm) {
+    &-content{
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__card{
+      width: 25%;
+      margin: 1rem;
+      flex: 1 0 45%;
+      
+      &-content{
+        .icon{
+          font-size: 6rem;
+          color: $black-color;
+        }
+
+        h3{
+          font-size: 2rem;
+          font-weight: lighter;
+        }
+
+        p{
+          font-size: 1.6rem;
+        }
+
+        .hours{
+          color: $secondary-color-dark;
+        }
+      }
     }
   }
 }
