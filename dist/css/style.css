@@ -362,7 +362,7 @@ p {
     justify-content: center;
     transition: all .4s linear;
     background-color: #fff;
-    border: 0.4rem solid #808080; }
+    border: .4rem solid transparent; }
     .workhours__card-content .icon {
       font-size: 8rem;
       color: #222629; }
@@ -383,7 +383,7 @@ p {
 
 @media (max-width: 576px) {
   .navbar-menu__links-item {
-    font-size: 90%;
+    font-size: 100%;
     line-height: 4rem; } }
 
 @media (min-width: 577px) and (max-width: 767px) {

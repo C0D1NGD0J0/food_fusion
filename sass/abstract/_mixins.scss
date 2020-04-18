@@ -8,7 +8,7 @@ phone_sm, phone_lg, tablet_up, tablet_ls, widescreen, desktop
   }
 
   @if $breakpoint == tablet_sm{
-    @media (min-width: 577px) and (max-width: 767px) { @content; }
+    @media (min-width: 577px) and (max-width: 767px){ @content; }
   }
 
   @if $breakpoint == tablet_md{

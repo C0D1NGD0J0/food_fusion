@@ -195,7 +195,7 @@
     justify-content: center;
     transition: all .4s linear;
     background-color: #fff;
-    border: .4rem solid $primary-color-dark;
+    border: .4rem solid transparent;
 
     &-content{
       .icon{
