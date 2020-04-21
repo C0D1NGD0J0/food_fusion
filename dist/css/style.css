@@ -356,7 +356,7 @@ p {
     flex: 1 0 20%;
     padding: 4rem 2rem;
     text-align: center;
-    border-radius: 2rem;
+    border-radius: 0rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -374,12 +374,66 @@ p {
     .workhours__card-content .hours {
       color: #a66f2c; }
     .workhours__card:hover, .workhours__card:focus {
+      border-radius: 2rem;
       transition: all .3s linear;
-      box-shadow: 0 0.1rem 0.8rem 0.1rem rgba(34, 38, 41, 0.6);
-      border: 0.4rem solid #a66f2c; }
+      border: 0.4rem solid #a66f2c;
+      box-shadow: 0 0.1rem 0.8rem 0.1rem rgba(34, 38, 41, 0.6); }
     .workhours__card:hover .icon, .workhours__card:focus .icon {
       color: #a66f2c;
       transition: color .4s linear; }
+
+.menuPreview {
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .menuPreview-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menuPreview__img {
+    width: 35%;
+    height: 50rem;
+    max-height: 50rem;
+    position: relative; }
+    .menuPreview__img:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      right: -4rem;
+      top: 3rem;
+      z-index: -1;
+      border: 1rem solid rgba(166, 111, 44, 0.4);
+      position: absolute; }
+    .menuPreview__img img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover; }
+  .menuPreview__description {
+    width: 50%;
+    display: flex;
+    padding: 4rem 6rem;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-around; }
+    .menuPreview__description p {
+      line-height: 1.7;
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 2rem; }
+  .menuPreview__title {
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    font-weight: lighter; }
+    .menuPreview__title::first-letter {
+      font-size: 6rem;
+      color: #a66f2c; }
 
 @media (max-width: 576px) {
   .navbar-menu__links-item {
