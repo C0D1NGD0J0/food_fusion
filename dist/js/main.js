@@ -1,11 +1,11 @@
 $(window).on("load", function () {
-  const t2 = new TimelineMax({ paused: false });
-  let splitText = new SplitText(".headline");
-  let splitText2 = new SplitText(".sub-headline");
-  t2.from('body', 2, {opacity: 0, ease: Expo.easeInOut})
-  .staggerFrom(splitText.chars, 1, { opacity: 0, y: -100, ease: Power1.easeIn }, .2)
-  .staggerFrom(splitText2.words, .5, { opacity: 0, x: 10, ease: Power2.easeIn }, .2)
-    .from(".hero-content__cta", 1, { opacity: 0, visibility: 'hidden'});
+  //const t2 = new TimelineMax({ paused: false });
+  //let splitText = new SplitText(".headline");
+  //let splitText2 = new SplitText(".sub-headline");
+  //t2.from('body', 2, {opacity: 0, ease: Expo.easeInOut})
+  //.staggerFrom(splitText.chars, 1, { opacity: 0, y: -100, ease: Power1.easeIn }, .2)
+  //.staggerFrom(splitText2.words, .5, { opacity: 0, x: 10, ease: Power2.easeIn }, .2)
+  //  .from(".hero-content__cta", 1, { opacity: 0, visibility: 'hidden'});
 
   $(".link-item1").hover(function(){
     $(".bg1").fadeIn(600);
@@ -47,15 +47,24 @@ $(window).on("load", function () {
     t1.reversed(!t1.reversed());
   });
 
-  const controller = new ScrollMagic.Controller();
-  const t3 = new TimelineMax({ paused: false });
+  //const controller = new ScrollMagic.Controller();
+  //const t3 = new TimelineMax({ paused: false });
   
-  t3.from('#aboutus', 2, {opacity: 0 })
-    .staggerFrom(".workhours__card", 1, { x: -50, opacity: 0, ease: Linear.easeIn }, 0.2)
-    .staggerFrom(".menuPreview", 1, {x: 50, opacity: 0, ease: Power1.easeIn, delay: .5});
-  t3.paused();
+  //t3.from('#aboutus', 2, {opacity: 0 });
+  //t3.staggerFrom(".workhours__card", 1, { x: -50, opacity: 0, ease: Linear.easeIn }, 0.2);
+  //t3.staggerFrom(".menuPreview", 1, {x: 50, opacity: 0, ease: Power1.easeIn, delay: .5});
+  
+  //const scene = new ScrollMagic.Scene({
+  //  triggerElement: "#aboutus",
+  //  triggerHook: 0
+  //}).setTween(t3).addTo(controller);
 
-  const scene = new ScrollMagic.Scene({
-    triggerElement: "#aboutus"
-  }).setTween(t3).addTo(controller);
+  $(".testimonial-customers img").click(function(){
+    $(".testimonial-customers img").removeClass("active");
+    $(this).addClass('active');
+
+    $(".testimonial-list__item").removeClass('active');
+    let data2 = $("#"+$(this).attr('alt'));
+    data2.addClass('active');
+  });
 });

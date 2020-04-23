@@ -4,26 +4,22 @@ phone_sm, phone_lg, tablet_up, tablet_ls, widescreen, desktop
 */
 @mixin respond($breakpoint){
   @if $breakpoint == phone{
-    @media (max-width: 576px) { @content; }
+    @media only screen and (max-width: 575px) { @content; }
   }
 
-  @if $breakpoint == tablet_sm{
-    @media (min-width: 577px) and (max-width: 767px){ @content; }
+  @if $breakpoint == phone_lg{
+    @media only screen and (min-width: 576px) and (max-width: 767px){ @content; }
   }
 
-  @if $breakpoint == tablet_md{
-    @media (min-width: 768px) and (max-width: 991px) { @content; }
-  }
-
-  @if $breakpoint == tablet_lg{
-    @media (min-width: 992px) { @content; }
+  @if $breakpoint == tablet{
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
   }
 
   @if $breakpoint == desktop{
-    @media (min-width: 1200px) { @content; }
+    @media only screen and (min-width: 992px) { @content; }
   }
 
   @if $breakpoint == widescreen{
-    @media (max-width: 1800px) { @content; }
+    @media only screen and (min-width: 1200px) { @content; }
   }
 }

@@ -1,34 +1,50 @@
-.navbar-menu{
-  &__links{
-    &-item{
-      @include respond(phone) {
-        font-size: 100%;
-        line-height: 4rem;
-      }
-
-      @include respond(tablet_sm) {
-        font-size: 110%;
-        line-height: 5rem;
-      }
-    }
-
-    .tag, 
-    .order{
-      @include respond(phone) {
-        display: none;
-      }
-      @include respond(tablet_sm) {
-        display: none;
-      }
-    }
-  }
-
-  &__images{
+.navbar{
+  &-menu{
     @include respond(phone) {
-      display: none;
+      width: 40%;
     }
-    @include respond(tablet_sm) {
-      display: none;
+
+    @include respond(phone_lg) {
+      width: 40%;
+    }
+
+    &__links{
+      @include respond(phone) {
+        width: 100%;
+        text-align: center;
+      }
+
+      &-item{
+        @include respond(phone) {
+          font-size: 110%;
+          line-height: 4rem;
+        }
+
+        @include respond(phone_lg) {
+          font-size: 120%;
+          line-height: 4rem;
+        }
+      }
+
+      .tag, 
+      .order{
+        @include respond(phone) {
+          display: none;
+        }
+
+        @include respond(phone_lg) {
+          display: none;
+        }
+      }
+    }
+
+    &__images{
+      @include respond(phone) {
+        display: none;
+      }
+      @include respond(phone_lg) {
+        display: none;
+      }
     }
   }
 }
@@ -37,23 +53,42 @@
   @include respond(phone) {
     display: none;
   }
+
+  @include respond(phone_lg) {
+    display: none;
+  }
 }
 
 .hero-content {
   @include respond(phone) {
+    padding: 0 1rem;
     margin-top: 4rem;
+  }
+
+  @include respond(phone_lg) {
+    padding: 0 1rem;
+    margin-top: 5rem;
   }
 
   .headline {
     @include respond(phone) {
       padding: 1rem;
-      font-size: 250% !important;
+      font-size: 250%;
+    }
+
+    @include respond(phone_lg) {
+      font-size: 350%;
+    }
+  }
+
+  .sub-headline {
+    @include respond(phone_lg) {
+      font-size: 90%;
     }
   }
 }
 
 .aboutus{
-  //padding: 4rem 0;
   &-content{
     @include respond(phone) {
       padding: 0;
@@ -62,18 +97,30 @@
       flex-direction: column;
     }
 
-    @include respond(tablet_sm){
-      padding: 2rem 1rem;
+    @include respond(phone_lg) {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(tablet_sm) {
+      padding: 2rem 3rem;
+      border: 1px solid green;
     }
   }
 
   &__img{
-    @include respond(phone) {
+    @include respond(tablet_sm) {
+      width: 40%;
+    }
+
+    @include respond(phone_lg) {
       display: none;
     }
 
-    @include respond(tablet_sm){
-      width: 40%;
+    @include respond(phone) {
+      display: none;
     }
 
     img{
@@ -89,19 +136,26 @@
     @include respond(phone) {
       width: 100%;
       text-align: left;
-      padding-bottom: 1rem;
+      padding-bottom: 3rem;
+    }
+
+    @include respond(phone_lg) {
+      width: 100%;
+      text-align: left;
+      padding-bottom: 3rem;
     }
 
     @include respond(tablet_sm) {
       width: 60%;
       text-align: left;
-      padding-bottom: 1rem;
+      padding-bottom: 3rem;
+      border: 1px solid red;
     }
     
     p{
-      @include respond(phone) {
+      @include respond(phone_lg) {
         padding: 1rem 0;
-        font-size: 110%;
+        font-size: 120%;
         text-align: left;
       }
     }
@@ -116,10 +170,21 @@
   }
 
   &__title{
+    @include respond(phone_lg) {
+      margin: 0;
+      padding: 0;
+      font-size: 160%;
+
+      &::first-letter{
+        font-size: 6rem;
+        color: $secondary-color-dark;
+      }
+    }
+
     @include respond(phone) {
       margin: 0;
       padding: 0;
-      font-size: 120%;
+      font-size: 150%;
 
       &::first-letter{
         font-size: 4rem;
@@ -134,20 +199,10 @@
 }
 
 .workhours {
-  @include respond(phone) {
-    overflow: scroll;
-
-    &-content{
-      padding: 0;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
+  @include respond(phone_lg) {
     &__card{
-      width: 25%;
-      margin: 1rem;
-      flex: 1 0 45%;
+      width: 30%;
+      flex: 0 1 70%;
       
       &-content{
         .icon{
@@ -203,6 +258,81 @@
           color: $secondary-color-dark;
         }
       }
+    }
+  }
+}
+
+.menuPreview{
+  @include respond(phone) {
+    padding: 2rem 0;
+  }
+
+  @include respond(phone_lg) {
+    padding: 2rem 0;
+  }
+
+  @include respond(tablet_sm) {
+    padding: 3rem;
+  }
+
+  &__description{
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem;
+    }
+
+    @include respond(phone_lg) {
+      width: 60%;
+      padding: 2rem;
+    }
+  }
+
+  &__title{
+    @include respond(phone) {
+      margin: 0;
+      padding: 0;
+      font-size: 150%;
+      font-weight: 500;
+
+      &::first-letter{
+        font-size: 4rem;
+        font-weight: lighter;
+        color: $secondary-color-dark;
+      }
+    }
+    @include respond(phone_lg) {
+      margin: 0;
+      padding: 0;
+      font-size: 150%;
+
+      &::first-letter{
+        font-size: 4rem;
+        font-weight: lighter;
+        color: $secondary-color-dark;
+      }
+    }
+  }
+
+  &__img{
+    @include respond(phone) {
+      display: none;
+    }
+
+    @include respond(phone) {
+      width: 35%;
+    }
+  }
+
+  &__icons{
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .icon{
+      font-size: 3rem;
+      color: rgba($secondary-color-dark, 0.7);
     }
   }
 }

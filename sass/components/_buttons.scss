@@ -33,3 +33,18 @@
   }
 }
 
+.newsletter-btn{
+  top: 50%;
+  right: 0;
+  position: absolute;
+  border-radius: 4rem;
+  padding: .9rem 2rem;
+  transform: translateY(-50%);
+  background-color: $black-color;
+
+  i {
+    font-size: 2rem;
+    color: $secondary-color-dark;
+  }
+}
+
